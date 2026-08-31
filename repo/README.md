@@ -1,40 +1,60 @@
 # Simulado.dev
 
-Simulado de entrevista técnica para desenvolvedores, em português. O projeto reúne perguntas de múltipla escolha, organiza por tema e nível de senioridade, e ao final mostra uma avaliação estimada com explicações sobre cada resposta.
-
 <p align="center">
   <img src="assets/logo.svg" alt="Logo do Simulado.dev" width="360" />
 </p>
 
-## Visão geral
+<p align="center">
+  <a href="#">
+    <img src="https://img.shields.io/badge/Status-Online-success" alt="Status online" />
+  </a>
+  <a href="#">
+    <img src="https://img.shields.io/badge/Tipo-Website%20Estática-7c3aed" alt="Tipo do projeto" />
+  </a>
+  <a href="#">
+    <img src="https://img.shields.io/badge/Linguagens-HTML%20%7C%20CSS%20%7C%20JS-0ea5e9" alt="Linguagens" />
+  </a>
+  <a href="#">
+    <img src="https://img.shields.io/badge/Deploy-Vercel-000000" alt="Deploy no Vercel" />
+  </a>
+</p>
 
-Este projeto é uma aplicação web estática que simula a experiência de uma entrevista técnica. O usuário escolhe:
+Simulado de entrevistas técnicas para desenvolvedores em português. O projeto oferece um banco de perguntas por nível de senioridade, tema e dificuldade, com explicações completas ao final da sessão.
 
-- nível de senioridade
-- tema da prova
-- quantidade de questões
-- se prefere incluir ou não o modo de revisão com explicações
+## ✨ Sobre o projeto
 
-Ao final, o sistema calcula uma nota aproximada, classifica o perfil e mostra o desempenho por tema.
+Este projeto simula uma experiência de entrevista técnica em navegador, com foco em candidatos que querem praticar lógica, arquitetura, frontend, backend, banco de dados, segurança, testes, DevOps e muito mais.
 
-## Funcionalidades
+O usuário pode:
+
+- escolher o nível: júnior, pleno ou sênior
+- selecionar o tema da prova
+- definir a quantidade de perguntas
+- responder em sequência
+- visualizar o resultado final com classificação estimada
+- revisar as explicações de cada questão
+
+Tudo acontece no navegador, sem backend, sem login e sem necessidade de instalação complexa.
+
+## 🚀 Funcionalidades
 
 - 252 perguntas de múltipla escolha
 - 15 áreas de conhecimento
-- suporte a níveis júnior, pleno e sênior
-- explicação para cada alternativa correta e incorreta
-- histórico e progresso salvos no navegador via localStorage
-- tema claro e escuro
-- sem backend, sem login e sem banco externo
+- suporte a níveis de senioridade diferentes
+- explicações detalhadas das respostas
+- persistência local via `localStorage`
+- modo claro e escuro
+- layout responsivo
+- deploy como site estático
 
-## Stack
+## 🧰 Stack
 
-- HTML
-- CSS
+- HTML5
+- CSS3
 - JavaScript
-- Python para geração do logo
+- Python (geração do logo)
 
-## Estrutura do projeto
+## 📁 Estrutura do projeto
 
 ```text
 repo/
@@ -43,52 +63,43 @@ repo/
 ├── package.json
 ├── README.md
 ├── LICENSE
+├── vercel.json
+├── .gitignore
 ├── assets/
 │   ├── logo.svg
 │   ├── logo-tema-claro.svg
 │   ├── logo-icone.svg
 │   └── ...
-└── .gitignore
+└── README.md
 ```
 
-## Como executar localmente
+## ▶️ Como executar localmente
 
-Você pode abrir o arquivo diretamente no navegador, mas o ideal é rodar por HTTP para evitar diferenças de comportamento:
+Você pode abrir o arquivo `index.html` diretamente no navegador, mas o ideal é servir a aplicação via HTTP:
 
 ```bash
 cd repo
 python3 -m http.server 8000
 ```
 
-Em seguida, abra:
+Depois acesse:
 
 ```text
 http://localhost:8000
 ```
 
-Se quiser usar o script do projeto:
+Ou use os scripts do projeto:
 
 ```bash
 npm install
 npm start
 ```
 
-## Deploy
+## 🌐 Deploy
 
-Como o projeto é estático, ele pode ser publicado facilmente em plataformas como Vercel, Netlify ou GitHub Pages.
+Como o projeto é estático, ele pode ser publicado facilmente em plataformas como Vercel, Netlify e GitHub Pages.
 
-### Vercel (recomendado)
-
-1. Faça push do projeto para um repositório GitHub.
-2. Acesse o Vercel e clique em "New Project".
-3. Importe o repositório.
-4. Configure como projeto estático:
-   - Framework: Other
-   - Build command: vazio ou não obrigatório
-   - Output directory: "."
-5. Faça o deploy.
-
-Também é possível publicar via CLI:
+### Vercel
 
 ```bash
 npm install
@@ -97,19 +108,19 @@ npx vercel --prod
 
 ### GitHub Pages
 
-1. Ative o GitHub Pages no repositório.
-2. Escolha a branch principal.
-3. O site estático será servido diretamente pela pasta raiz do projeto.
+1. Suba o projeto para o GitHub.
+2. Ative o GitHub Pages no repositório.
+3. Escolha a branch principal como fonte.
 
-> O projeto não precisa de build step, então qualquer serviço de hosting estático atende.
+> O projeto não precisa de build step, então qualquer serviço de hospedagem estática funciona corretamente.
 
-## Banco de perguntas
+## 🧠 Banco de perguntas
 
-A base de dados de questões está dentro do arquivo principal do app, no objeto `QUESTIONS`, localizado em `index.html`.
+A base de questões está no objeto `QUESTIONS` dentro do arquivo [index.html](index.html).
 
-## Logotipo
+## 🎨 Logotipo
 
-Para regenerar os arquivos de logo após alterações de estilo, execute:
+Para regenerar os arquivos de logo após alterações visuais, execute:
 
 ```bash
 npm install
@@ -117,15 +128,16 @@ python3 -m pip install fonttools brotli
 python3 gerar-logo.py
 ```
 
-## Contribuição
+## 🤝 Contribuição
 
-As perguntas e regras do app podem ser ajustadas diretamente no `index.html`, mas convém manter a estrutura de cada item consistente com o formato já usado no projeto.
+Contribuições são bem-vindas. Se quiser melhorar perguntas, corrigir explicações ou ajustar o design, basta abrir uma issue ou enviar um pull request.
 
-## Licença
+## 📄 Licença
 
 Este projeto está sob a licença MIT. Consulte o arquivo [LICENSE](LICENSE).
 
-## Créditos
+## 🙌 Créditos
 
 - Tipografia: Inter
-- A aplicação foi pensada para prática de entrevistas técnicas em português
+- Design e estrutura do app: Simulado.dev
+- Foco: prática de entrevistas técnicas em português

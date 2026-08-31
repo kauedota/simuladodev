@@ -1,11 +1,13 @@
 {
   "name": "simulado-dev",
   "version": "1.0.0",
-  "description": "Simulado de entrevista tecnica para desenvolvedores, em portugues",
+  "description": "Simulado de entrevista técnica para desenvolvedores, em português",
   "private": true,
   "scripts": {
     "start": "python3 -m http.server 8000",
-    "logo": "python3 gerar-logo.py"
+    "dev": "python3 -m http.server 8000",
+    "logo": "python3 gerar-logo.py",
+    "deploy": "npx vercel --prod"
   },
   "devDependencies": {
     "@fontsource/inter": "^5.0.0"

@@ -1,0 +1,13 @@
+{
+  "name": "simulado-dev",
+  "version": "1.0.0",
+  "description": "Simulado de entrevista tecnica para desenvolvedores, em portugues",
+  "private": true,
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "logo": "python3 gerar-logo.py"
+  },
+  "devDependencies": {
+    "@fontsource/inter": "^5.0.0"
+  }
+}
